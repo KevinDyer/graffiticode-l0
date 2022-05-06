@@ -1,6 +1,5 @@
 /* Copyright (c) 2021, ARTCOMPILER INC */
 import * as React from 'react';
-import * as d3 from 'd3';
 import './style.css';
 
 function renderAttr(attr) {
@@ -71,23 +70,16 @@ function renderElts(data) {
   return elts;
 }
 
-export class Viewer extends React.Component {
-  componentDidMount() {
-    d3.select('#graff-view').append('div').classed('done-rendering', true);
-  }
-  
-  render() {
-    const props = this.props;
-    const data = props.obj && [].concat(props.obj) || [];
-    const elts = renderElts(data);
-    return (
-      <div>
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-        {elts}
-      </div>
-    );
-  }
-};
+function Viewer(props) {
+  const data = props.obj && [].concat(props.obj) || [];
+  const elts = renderElts(data);
+  return (
+    <div>
+      <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+      {elts}
+    </div>
+  );
+}
 
 window.gcexports.viewer = (function () {
   return {

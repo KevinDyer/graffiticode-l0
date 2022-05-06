@@ -23,11 +23,5 @@ global.cancelAnimationFrame = function (id) {
 };
 copyProps(window, global);
 
-// Enzyme setup
-import enzyme from 'enzyme'; // note: must require enzyme after putting JSDOM props on global with React14
-import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
-
-enzyme.configure({ adapter: new Adapter() });
-
 // this is needed for viewer and can't be done in the test file since it needs to be there before Viewer is required
 window.gcexports = {};
