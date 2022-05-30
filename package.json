@@ -13,7 +13,7 @@
   "scripts": {
     "build": "npx webpack --config config/webpack.config.js --mode production; cp src/style.css dist; cp src/lexicon.js dist",
     "build:dev": "npx webpack --config config/webpack.config.js --mode development; cp src/style.css dist; cp src/lexicon.js dist",
-    "start": "node app.js",
+    "start": "node -r @graffiticode/tracing app.js",
     "test": "NODE_OPTIONS=--experimental-vm-modules npx jest --config config/jest.config.js",
     "watch": "nodemon -w src -w app.js -w package.json --exec make"
   },
@@ -22,6 +22,7 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@graffiticode/basis": "^1.0.11",
+    "@graffiticode/tracing": "^0.3.0",
     "@pollyjs/adapter-node-http": "^6.0.5",
     "@pollyjs/core": "^6.0.5",
     "@pollyjs/persister-fs": "^6.0.5",
