@@ -7,7 +7,7 @@ build-dev:
 	npm run build:dev
 
 start:
-	npm start
+	node app.js
 
 watch:
 	npm run watch
