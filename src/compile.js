@@ -19,7 +19,10 @@ export class Transformer extends BasisTransformer {
   HELLO(node, options, resume) {
     this.visit(node.elts[0], options, async (e0, v0) => {
       const err = [];
-      const val = `hello, ${v0}!`;
+      const val = {
+        type: 'b',
+        elts: [`hello, ${v0}!`],
+      };
       resume(err, val);
     });
   }
