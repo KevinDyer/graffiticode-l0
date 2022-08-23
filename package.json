@@ -1,5 +1,5 @@
 {
-  "name": "@graffiticode/l0",
+  "name": "@graffiticode/L0",
   "version": "0.0.1",
   "description": "Compiler as a service.",
   "author": "ARTCOMPILER",
@@ -7,7 +7,7 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/graffiticode/l0"
+    "url": "https://github.com/graffiticode/L0"
   },
   "type": "module",
   "scripts": {
@@ -21,7 +21,7 @@
     "@babel/plugin-transform-runtime": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
-    "@graffiticode/basis": "^1.0.11",
+    "@graffiticode/basis": "^1.1.0",
     "@graffiticode/tracing": "^0.3.0",
     "@pollyjs/adapter-node-http": "^6.0.5",
     "@pollyjs/core": "^6.0.5",
