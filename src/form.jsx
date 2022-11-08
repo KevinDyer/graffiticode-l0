@@ -1,6 +1,7 @@
 export const Form = ({ data }) => {
+  data = data || {};
   return (
-    <div class="graffito">
+    <div className="graffito">
       hello, {data}!
     </div>
   );
